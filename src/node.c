@@ -73,7 +73,7 @@ struct node* node_find_by_id(struct node **nodes, int size, int id)
         }
         if(id == nodes[i]->id)
         {
-            finder = NULL;
+            finder = nodes[i];
             break;
         }
     }
