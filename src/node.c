@@ -80,3 +80,19 @@ struct node* node_find_by_id(struct node **nodes, int size, int id)
 
     return finder;
 }
+
+void node_print(struct node **nodes, int count)
+{
+    assert(nodes != NULL);
+
+    for(int i = 0; i < count; i++)
+    {
+        if(nodes[i] == NULL)
+        {
+            continue;
+        }
+
+        printf("[%d (%02f, %02f)], ", nodes[i]->id, nodes[i]->x, nodes[i]->y);
+    }
+}
+
