@@ -38,6 +38,18 @@ int main(void)
     quadtree_insert(qt, 24, 24, 7);
     quadtree_insert(qt, 27, 27, 8);
     quadtree_insert(qt, 30, 30, 9);
+
+    quadtree_insert(qt, 3, 30, 10);
+    quadtree_insert(qt, 6, 27, 11);
+    quadtree_insert(qt, 9, 24, 12);
+    quadtree_insert(qt, 12, 21, 13);
+    quadtree_insert(qt, 15, 18, 14);
+    quadtree_insert(qt, 18, 15, 15);
+    quadtree_insert(qt, 21, 12, 16);
+    quadtree_insert(qt, 24, 9, 17);
+    quadtree_insert(qt, 27, 6, 18);
+    quadtree_insert(qt, 30, 3, 19);
+
     quadtree_print(qt);
     quadtree_delete(qt);
 

@@ -59,18 +59,15 @@ struct quadtree* quadtree_insert(struct quadtree *quadtree, double x, double y, 
             {
                 return quadtree_insert(quadtree->children[quadrant], x, y, id);
             }
-            else
-            {
-                if(quadtree->node_count < MAX_NODES)
-                {
-                    node_insert(quadtree->nodes, quadtree->node_count, x, y, id);
-                    quadtree->node_count++;
-                    return quadtree;
-                }
-
-                return NULL;
-            }
         }
+        if(quadtree->node_count < MAX_NODES)
+        {
+            node_insert(quadtree->nodes, quadtree->node_count, x, y, id);
+            quadtree->node_count++;
+            return quadtree;
+        }
+
+        return NULL;
     }
     else if(quadtree->children == NULL)
     {
