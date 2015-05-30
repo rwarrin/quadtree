@@ -27,5 +27,19 @@ int main(void)
 
     node_free_array(nodes, node_count);
 
+    struct quadtree *qt = quadtree_create(0, 0, 30, 30, 0);
+    quadtree_insert(qt, 3, 3, 0);
+    quadtree_insert(qt, 6, 6, 1);
+    quadtree_insert(qt, 9, 9, 2);
+    quadtree_insert(qt, 12, 12, 3);
+    quadtree_insert(qt, 15, 15, 4);
+    quadtree_insert(qt, 18, 18, 5);
+    quadtree_insert(qt, 21, 21, 6);
+    quadtree_insert(qt, 24, 24, 7);
+    quadtree_insert(qt, 27, 27, 8);
+    quadtree_insert(qt, 30, 30, 9);
+    quadtree_print(qt);
+    quadtree_delete(qt);
+
     return 0;
 }
